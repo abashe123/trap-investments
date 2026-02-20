@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Coming Soon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
-        body { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            font-family: Arial, sans-serif; 
-            background: #f2f2f2;
-        }
-        .container {
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             text-align: center;
         }
-        h1 { font-size: 3rem; color: #333; }
-        p { font-size: 1.2rem; color: #666; }
-        img { max-width: 200px; margin-bottom: 20px; }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #94a3b8;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Optional: add company logo -->
-        <!-- <img src="/images/logo.png" alt="Logo"> -->
-        <h1>🚀 Coming Soon!</h1>
-        <p>Our site is under development. Stay tuned!</p>
-    </div>
+
+<div>
+    <h1>Trap Investments</h1>
+    <p>Our website is coming soon.</p>
+</div>
+
 </body>
 </html>
