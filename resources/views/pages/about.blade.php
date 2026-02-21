@@ -2,47 +2,28 @@
 
 @section('content')
 
-<!-- About Us Hero -->
-<section class="mb-16">
-    <div class="text-center max-w-3xl mx-auto">
-        <h1 class="text-4xl font-bold mb-6">About Trap Investments</h1>
-        <p class="text-gray-700 text-lg">
-            Welcome to Trap Investments, proudly rooted in Arusha, Tanzania. 
-            We are a diversified local company delivering dependable mobility solutions, 
-            curated real estate opportunities, and high-quality food supplies across Arusha and the surrounding regions.
-        </p>
-    </div>
-</section>
-
-<!-- Mission Section -->
-<section class="mb-16">
-    <h2 class="text-3xl font-bold mb-6 text-center">Our Mission</h2>
-    <p class="text-gray-700 text-center max-w-3xl mx-auto">
-        Our mission is to simplify life and business for our clients by offering reliable services, 
-        transparent transactions, and locally informed advice.
+<section class="container mx-auto px-6 py-16">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">About Trap Investments</h1>
+    <p class="text-gray-600 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12">
+        Welcome to Trap Investments, proudly rooted in Arusha, Tanzania. We deliver dependable mobility solutions, curated real estate opportunities, 
+        and high-quality food supplies. Our mission is to simplify life and business with reliable services, transparent transactions, and locally informed advice.
     </p>
-</section>
 
-<!-- Values / Community -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-    <div class="bg-white p-8 rounded-2xl shadow">
-        <h3 class="text-xl font-bold mb-3">Local Expertise</h3>
-        <p class="text-gray-600">
-            Partnering with trusted suppliers, land authorities, and tourism operators for quality and legal clarity.
-        </p>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-8 rounded-2xl shadow hover:scale-105 transition">
+            <h3 class="font-bold text-xl mb-2">Our Mission</h3>
+            <p class="text-gray-600 text-sm">Provide integrated and reliable services across transport, property, and food supply industries.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow hover:scale-105 transition">
+            <h3 class="font-bold text-xl mb-2">Our Vision</h3>
+            <p class="text-gray-600 text-sm">To become the most trusted investment partner in Tanzania, known for quality and integrity.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow hover:scale-105 transition">
+            <h3 class="font-bold text-xl mb-2">Our Values</h3>
+            <p class="text-gray-600 text-sm">Reliability, Transparency, Excellence, Local Knowledge, Sustainability.</p>
+        </div>
     </div>
-    <div class="bg-white p-8 rounded-2xl shadow">
-        <h3 class="text-xl font-bold mb-3">Professional Service</h3>
-        <p class="text-gray-600">
-            Arranging safari-ready vehicles, guiding land purchases, and delivering fresh produce with professionalism.
-        </p>
-    </div>
-    <div class="bg-white p-8 rounded-2xl shadow">
-        <h3 class="text-xl font-bold mb-3">Sustainability</h3>
-        <p class="text-gray-600">
-            Supporting local farmers, promoting responsible land use, and creating economic opportunities for Arusha’s communities.
-        </p>
-    </div>
+
 </section>
 
 @endsection
