@@ -1,149 +1,106 @@
 @extends('layouts.app')
 
+@section('title', 'Real Estate | Trap Investments')
+
 @section('content')
+<!-- Hero Section -->
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 wow fadeInLeft">
+                <a href="{{ url('/') }}" class="text-decoration-none d-inline-flex align-items-center mb-4">
+                    <i class="fas fa-arrow-left me-2"></i> Back to Home
+                </a>
 
-<!-- HERO SECTION -->
-<section class="relative h-[70vh] flex items-center">
-
-    <!-- Background -->
-    <img src="{{ asset('images/trapestates logo.jpeg') }}"
-         class="absolute inset-0 w-full h-full object-cover">
-
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/70"></div>
-
-    <!-- Content -->
-    <div class="relative container mx-auto px-6 text-white text-center">
-        <p class="uppercase tracking-widest text-gray-300 mb-4">
-            Trap Real Estate • Arusha, Tanzania
-        </p>
-
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Premium Property Solutions
-        </h1>
-
-        <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
-            Discover high-quality land and property opportunities with transparent transactions and professional guidance.
-        </p>
-
-        <a href="/contact"
-           class="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition">
-           Contact Us
-        </a>
-    </div>
-</section>
-
-<!-- PROPERTIES SHOWCASE -->
-<section class="py-28 bg-gray-100">
-    <div class="container mx-auto px-6">
-
-        <div class="max-w-3xl mx-auto text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">
-                Featured Properties
-            </h2>
-            <p class="text-gray-600 text-lg">
-                Explore selected properties and land parcels carefully curated for residential, commercial, and investment purposes.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-12">
-
-            <!-- Placeholder Property 1 -->
-            <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform">
-                <img src="{{ asset('images/placeholder-property1.jpg') }}"
-                     class="w-full h-[250px] object-cover hover:scale-105 transition duration-500">
-                <div class="p-6 bg-white">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Residential Land</h3>
-                    <p class="text-gray-600 text-sm">
-                        Prime plots for residential development with easy access to city amenities.
-                    </p>
-                </div>
+                <h1 class="display-5 mb-3">Trap Real Estate</h1>
+                <p class="mb-4">
+                    Property sales, rentals, and investment solutions across Tanzania. 
+                    Helping individuals and businesses secure the right property.
+                </p>
             </div>
-
-            <!-- Placeholder Property 2 -->
-            <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform">
-                <img src="{{ asset('images/placeholder-property2.jpg') }}"
-                     class="w-full h-[250px] object-cover hover:scale-105 transition duration-500">
-                <div class="p-6 bg-white">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Commercial Land</h3>
-                    <p class="text-gray-600 text-sm">
-                        Strategically located plots ideal for shops, offices, and investment purposes.
-                    </p>
-                </div>
+            <div class="col-lg-6 wow fadeInRight">
+                <img class="img-fluid rounded shadow" src="{{ asset('images/trapestates logo.jpeg') }}" alt="Real Estate">
             </div>
-
-            <!-- Placeholder Property 3 -->
-            <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform">
-                <img src="{{ asset('images/placeholder-property3.jpg') }}"
-                     class="w-full h-[250px] object-cover hover:scale-105 transition duration-500">
-                <div class="p-6 bg-white">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Investment Land</h3>
-                    <p class="text-gray-600 text-sm">
-                        Large plots suitable for long-term investment and development opportunities.
-                    </p>
-                </div>
-            </div>
-
         </div>
     </div>
-</section>
+</div>
 
-<!-- SERVICES SECTION -->
-<section class="py-28 bg-white">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
+<!-- Services Slider -->
+<div class="container-xxl py-5 bg-white">
+    <div class="container text-center mb-5">
+        <h2 class="mb-3">Our Services</h2>
+        <p>Professional property services tailored to your needs.</p>
+    </div>
 
-        <p class="text-sm uppercase tracking-widest text-gray-400 mb-4">
-            Our Services
-        </p>
+    <div class="owl-carousel food-offer-carousel">
 
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Professional Real Estate Solutions
-        </h2>
-
-        <div class="w-16 h-[2px] bg-black mb-6 mx-auto"></div>
-
-        <div class="grid md:grid-cols-3 gap-12 mt-12 text-left">
-
-            <div class="p-6 rounded-3xl shadow-lg hover:shadow-2xl transition transform">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Land Buying & Selling</h3>
-                <p class="text-gray-600 text-sm md:text-base">
-                    Assisting clients in acquiring or selling land with transparent and secure transactions.
-                </p>
+        <div class="offer-card">
+            <img src="{{ asset('images/trapestate-plot1.jpg') }}" alt="Property Sales">
+            <div class="offer-overlay">
+                <h4>Property Sales</h4>
+                <p>Buy residential and commercial properties with confidence.</p>
+                <a href="{{ url('/contact') }}" class="btn btn-sm btn-light mt-2">Inquire Now</a>
             </div>
+        </div>
 
-            <div class="p-6 rounded-3xl shadow-lg hover:shadow-2xl transition transform">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Property Investment Guidance</h3>
-                <p class="text-gray-600 text-sm md:text-base">
-                    Expert advice for long-term property investment, maximizing returns and minimizing risks.
-                </p>
+        <div class="offer-card">
+            <img src="{{ asset('images/trapestate-plot2.jpg') }}" alt="Property Rentals">
+            <div class="offer-overlay">
+                <h4>Property Rentals</h4>
+                <p>Find apartments, homes, and offices for rent.</p>
+                <a href="{{ url('/contact') }}" class="btn btn-sm btn-light mt-2">Inquire Now</a>
             </div>
+        </div>
 
-            <div class="p-6 rounded-3xl shadow-lg hover:shadow-2xl transition transform">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Legal & Documentation Support</h3>
-                <p class="text-gray-600 text-sm md:text-base">
-                    Helping you navigate land registration, ownership verification, and property legalities.
-                </p>
+        <div class="offer-card">
+            <img src="{{ asset('images/trapestate-plot3.jpg') }}" alt="Investment Advisory">
+            <div class="offer-overlay">
+                <h4>Investment Advisory</h4>
+                <p>Expert advice on real estate investment opportunities.</p>
+                <a href="{{ url('/contact') }}" class="btn btn-sm btn-light mt-2">Inquire Now</a>
             </div>
-
         </div>
 
     </div>
-</section>
+</div>
 
-<!-- CTA SECTION -->
-<section class="py-28 bg-black text-white">
-    <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-6">
-            Interested in Our Properties?
-        </h2>
-        <p class="text-gray-300 mb-10 max-w-xl mx-auto">
-            Contact Trap Real Estate directly for property inquiries, pricing, and investment guidance.
-        </p>
-        <a href="/contact"
-           class="bg-white text-black px-10 py-4 rounded-lg font-semibold hover:bg-gray-200 transition">
-           Contact Us
-        </a>
+<!-- Footer (Same as Other Pages) -->
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-3">Trap Investments</h5>
+                <p>Reliable investment & business services in Tanzania, including Car Rental, Food Supply, and Real Estate solutions.</p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url('/') }}" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="{{ url('/pages/car-rental') }}" class="text-light text-decoration-none">Car Rental</a></li>
+                    <li><a href="{{ url('/pages/food') }}" class="text-light text-decoration-none">Trap Food</a></li>
+                    <li><a href="{{ url('/pages/real-estate') }}" class="text-light text-decoration-none">Real Estate</a></li>
+                    <li><a href="{{ url('/contact') }}" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mb-3">Contact</h5>
+                <p>Arusha, Tanzania</p>
+                <p>Email: info@trapinvestments.com</p>
+                <p>Phone: +255 123 456 789</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mb-3">Follow Us</h5>
+                <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <hr class="bg-secondary mt-4">
+        <div class="text-center pt-3">
+            &copy; {{ date('Y') }} Trap Investments. All Rights Reserved.
+        </div>
     </div>
-</section>
-
+</footer>
 @endsection

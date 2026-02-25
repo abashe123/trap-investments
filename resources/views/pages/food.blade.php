@@ -1,105 +1,128 @@
 @extends('layouts.app')
 
+@section('title', 'Trap Food | Trap Investments')
+
 @section('content')
+<!-- Hero Section -->
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 wow fadeInLeft">
+                <!-- Back Arrow -->
+                <a href="{{ url('/') }}" class="text-decoration-none d-inline-flex align-items-center mb-4">
+                    <i class="fas fa-arrow-left me-2"></i> Back to Home
+                </a>
 
-<!-- HERO SECTION -->
-<section class="relative h-[75vh] flex items-center">
+                <h1 class="display-5 mb-3">Trap Food</h1>
+                <p class="mb-4">Fresh foods, vegetables, and groceries delivered to businesses and households. Quality, reliable, and timely supply across Tanzania.</p>
+            </div>
+            <div class="col-lg-6 wow fadeInRight">
+                <img class="img-fluid rounded shadow" src="{{ asset('images/trapfood logo.jpeg') }}" alt="Trap Food">
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Background -->
-    <img src="{{ asset('images/trapfood logo.jpeg') }}"
-         class="absolute inset-0 w-full h-full object-cover">
-
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/70"></div>
-
-    <!-- Content -->
-    <div class="relative container mx-auto px-6 text-white text-center">
-
-        <p class="uppercase tracking-widest text-gray-300 mb-4">
-            Trap Food • Arusha, Tanzania
-        </p>
-
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Premium Food Supply<br>
-            Fresh & Reliable
-        </h1>
-
-        <p class="text-lg md:text-xl text-gray-200 max-w-xl mx-auto mb-8">
-            Supplying fresh rice, grains, and daily essentials to businesses and homes across Tanzania.
-        </p>
-
-        <a href="#contact" 
-           class="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition">
-           Contact Us
-        </a>
-
+<!-- Services / Offerings Slider Start -->
+<div class="container-xxl py-5 bg-white">
+    <div class="container text-center mb-5">
+        <h2 class="mb-3">What We Offer</h2>
+        <p>We provide high-quality food supplies for households, restaurants, and businesses.</p>
     </div>
 
-</section>
+    <div class="owl-carousel food-offer-carousel">
 
-<!-- SERVICES SECTION (PREMIUM STYLE) -->
-<section class="py-28 bg-white">
-
-    <div class="container mx-auto px-6">
-
-        <!-- Header -->
-        <div class="max-w-2xl mb-20 mx-auto text-center">
-
-            <p class="text-sm uppercase tracking-widest text-gray-400 mb-4">
-                Our Services
-            </p>
-
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Professional Food Solutions
-            </h2>
-
-            <div class="w-16 h-[2px] bg-black mb-6 mx-auto"></div>
-
-            <p class="text-gray-600 text-lg leading-relaxed">
-                Reliable supply of quality food products to businesses and households, tailored for freshness, quantity, and consistency.
-            </p>
-
+        <!-- Card 1 -->
+        <div class="offer-card">
+            <img src="{{ asset('images/trapfood-vege.jpg') }}" alt="Fresh Vegetables">
+            <div class="offer-overlay">
+                <h4>Fresh Vegetables</h4>
+                <p>Daily supply of fresh and healthy vegetables sourced locally.</p>
+                <a href="#contact" class="btn btn-sm btn-light mt-2">Order Now</a>
+            </div>
         </div>
 
-        <!-- Products List -->
-        <div class="grid md:grid-cols-2 gap-12">
-
-            <div class="rounded-2xl overflow-hidden shadow-lg">
-                <img src="{{ asset('images/Trapfood rice.jpeg') }}"
-                     class="w-full h-[400px] object-cover hover:scale-105 transition duration-500">
+        <!-- Card 2 -->
+        <div class="offer-card">
+            <img src="{{ asset('images/trapfood-vege2.jpg') }}" alt="Fresh Fruits">
+            <div class="offer-overlay">
+                <h4>Fresh Fruits</h4>
+                <p>Seasonal fruits carefully selected for quality and freshness.</p>
+                <a href="#contact" class="btn btn-sm btn-light mt-2">Order Now</a>
             </div>
+        </div>
 
-            <div class="rounded-2xl overflow-hidden shadow-lg">
-                <img src="{{ asset('images/trapfood ricebag.jpeg') }}"
-                     class="w-full h-[400px] object-cover hover:scale-105 transition duration-500">
+        <!-- Card 3 -->
+        <div class="offer-card">
+            <img src="{{ asset('images/trapfood-vege3.jpg') }}" alt="Groceries">
+            <div class="offer-overlay">
+                <h4>Grocery Supplies</h4>
+                <p>Reliable delivery of essential groceries to homes and businesses.</p>
+                <a href="#contact" class="btn btn-sm btn-light mt-2">Order Now</a>
             </div>
+        </div>
 
+        <!-- Card 4 -->
+        <div class="offer-card">
+            <img src="{{ asset('images/trapfood-vege4.jpg') }}" alt="Groceries">
+            <div class="offer-overlay">
+                <h4>Grocery Supplies</h4>
+                <p>Reliable delivery of essential groceries to homes and businesses.</p>
+                <a href="#contact" class="btn btn-sm btn-light mt-2">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="offer-card">
+            <img src="{{ asset('images/trapfood-vege5.jpg') }}" alt="Groceries">
+            <div class="offer-overlay">
+                <h4>Grocery Supplies</h4>
+                <p>Reliable delivery of essential groceries to homes and businesses.</p>
+                <a href="#contact" class="btn btn-sm btn-light mt-2">Order Now</a>
+            </div>
         </div>
 
     </div>
+</div>
+<!-- Services / Offerings Slider End -->
 
-</section>
+<!-- Footer -->
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-3">Trap Investments</h5>
+                <p>Reliable investment & business services in Tanzania, including Car Rental, Food Supply, and Real Estate solutions.</p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url('/') }}" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="{{ url('/pages/car-rental') }}" class="text-light text-decoration-none">Car Rental</a></li>
+                    <li><a href="{{ url('/pages/food') }}" class="text-light text-decoration-none">Trap Food</a></li>
+                    <li><a href="{{ url('/pages/real-estate') }}" class="text-light text-decoration-none">Real Estate</a></li>
+                    <li><a href="{{ url('/contact') }}" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mb-3">Contact</h5>
+                <p>Arusha, Tanzania</p>
+                <p>Email: info@trapinvestments.com</p>
+                <p>Phone: +255 123 456 789</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mb-3">Follow Us</h5>
+                <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
 
-<!-- CTA SECTION -->
-<section id="contact" class="py-28 bg-black text-white">
-
-    <div class="container mx-auto px-6 text-center">
-
-        <h2 class="text-4xl font-bold mb-6">
-            Ready to Supply Your Business?
-        </h2>
-
-        <p class="text-gray-300 mb-10 max-w-xl mx-auto">
-            Contact us for pricing, availability, and bulk orders.
-        </p>
-
-        <a href="/contact"
-           class="bg-white text-black px-10 py-4 rounded-lg font-semibold hover:bg-gray-200 transition">
-           Contact Us
-        </a>
-
+        <hr class="bg-secondary mt-4">
+        <div class="text-center pt-3">
+            &copy; {{ date('Y') }} Trap Investments. All Rights Reserved.
+        </div>
     </div>
-
-</section>
-
+</footer>
 @endsection

@@ -1,184 +1,106 @@
 @extends('layouts.app')
 
+@section('title', 'Car Rental | Trap Investments')
+
 @section('content')
-
-<!-- HERO SECTION -->
-<section class="relative h-[75vh] flex items-center">
-
-    <!-- Background -->
-    <img src="{{ asset('images/trapcar rental.jpeg') }}"
-         class="absolute inset-0 w-full h-full object-cover">
-
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/70"></div>
-
-    <!-- Content -->
-    <div class="relative container mx-auto px-6 text-white">
-
-        <p class="uppercase tracking-widest text-gray-300 mb-4">
-            Trap Car Rental • Arusha, Tanzania
-        </p>
-
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Premium Car Rental<br>
-            and Safari Vehicles
-        </h1>
-
-        <p class="text-lg md:text-xl text-gray-200 max-w-xl mb-8">
-            Professional, reliable, and safari-ready vehicles for tourism,
-            business, and personal use across Tanzania.
-        </p>
-
-        <a href="#contact" 
-           class="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition">
-           Contact Us
-        </a>
-
-    </div>
-
-</section>
-
-<!-- SERVICES SECTION (PREMIUM STYLE) -->
-<section class="py-28 bg-white">
-
-    <div class="container mx-auto px-6">
-
-        <!-- Header -->
-        <div class="max-w-2xl mb-20">
-
-            <p class="text-sm uppercase tracking-widest text-gray-400 mb-4">
-                Our Services
-            </p>
-
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Professional Vehicle Solutions
-            </h2>
-
-            <div class="w-16 h-[2px] bg-black mb-6"></div>
-
-            <p class="text-gray-600 text-lg leading-relaxed">
-                Reliable and professionally maintained vehicles tailored for tourism, corporate mobility, and long-term rental needs.
-            </p>
-
-        </div>
-
-        <!-- Services List -->
-        <div class="grid md:grid-cols-3 gap-12">
-
-            <div class="bg-gray-50 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition transform">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                    Safari Vehicle Rental
-                </h3>
-                <p class="text-gray-600 text-sm md:text-base">
-                    4x4 vehicles prepared for Tanzania’s national parks and safari routes, ensuring safety, durability, and comfort.
-                </p>
-            </div>
-
-            <div class="bg-gray-50 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition transform">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                    Executive Transport
-                </h3>
-                <p class="text-gray-600 text-sm md:text-base">
-                    Premium transport solutions for executives, business travel, and private clients requiring professionalism and reliability.
-                </p>
-            </div>
-
-            <div class="bg-gray-50 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition transform">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                    Long-Term Rental
-                </h3>
-                <p class="text-gray-600 text-sm md:text-base">
-                    Flexible rental arrangements for organizations and individuals, with consistent vehicle support and maintenance.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FLEET SHOWCASE -->
-<section class="py-28 bg-gray-100">
-
-    <div class="container mx-auto px-6">
-
-        <!-- Header -->
-        <div class="max-w-xl mb-16">
-            <p class="text-sm uppercase tracking-widest text-gray-400 mb-3">
-                Our Fleet
-            </p>
-
-            <h2 class="text-4xl font-bold mb-4">
-                Featured Vehicle
-            </h2>
-
-            <p class="text-gray-600 text-lg">
-                Built for comfort, safety, and performance across Tanzania.
-            </p>
-        </div>
-
-        <!-- Vehicle -->
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-
-            <!-- Image -->
-            <div class="rounded-2xl overflow-hidden shadow-lg">
-                <img src="{{ asset('images/trapcar2.jpeg') }}"
-                     class="w-full h-[420px] object-cover hover:scale-105 transition duration-500">
-            </div>
-
-            <!-- Details -->
-            <div>
-                <p class="text-sm text-gray-400 mb-2">
-                    Toyota Land Cruiser
-                </p>
-
-                <h3 class="text-3xl font-bold mb-4">
-                    Safari Ready. City Ready.
-                </h3>
-
-                <p class="text-gray-600 mb-6 text-lg">
-                    Ideal for safaris, airport transfers, business travel, and long-distance journeys.
-                </p>
-
-                <div class="flex gap-8 text-sm text-gray-500 mb-8">
-                    <span>4x4 Drive</span>
-                    <span>Air Conditioning</span>
-                    <span>Professional Maintenance</span>
-                </div>
-
-                <a href="#contact"
-                   class="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
-                   Check Availability
+<!-- Hero Section -->
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 wow fadeInLeft">
+                <a href="{{ url('/') }}" class="text-decoration-none d-inline-flex align-items-center mb-4">
+                    <i class="fas fa-arrow-left me-2"></i> Back to Home
                 </a>
-            </div>
 
+                <h1 class="display-5 mb-3">Trap Car Rental</h1>
+                <p class="mb-4">
+                    Affordable and reliable car rental services in Tanzania. 
+                    We offer executive, SUV, and economy vehicles for business and personal travel.
+                </p>
+            </div>
+            <div class="col-lg-6 wow fadeInRight">
+                <img class="img-fluid rounded shadow" src="{{ asset('images/trap car logo.jpg') }}" alt="Car Rental">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fleet Slider -->
+<div class="container-xxl py-5 bg-white">
+    <div class="container text-center mb-5">
+        <h2 class="mb-3">Our Fleet</h2>
+        <p>Comfortable, safe, and well-maintained vehicles for every journey.</p>
+    </div>
+
+    <div class="owl-carousel food-offer-carousel">
+
+        <div class="offer-card">
+            <img src="{{ asset('images/car1.jpg') }}" alt="SUV Rental">
+            <div class="offer-overlay">
+                <h4>SUV Rental</h4>
+                <p>Perfect for safaris and long-distance travel.</p>
+                <a href="{{ url('/contact') }}" class="btn btn-sm btn-light mt-2">Book Now</a>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <img src="{{ asset('images/car2.jpg') }}" alt="Executive Car">
+            <div class="offer-overlay">
+                <h4>Executive Cars</h4>
+                <p>Luxury and comfort for corporate and VIP clients.</p>
+                <a href="{{ url('/contact') }}" class="btn btn-sm btn-light mt-2">Book Now</a>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <img src="{{ asset('images/car3.jpg') }}" alt="Economy Car">
+            <div class="offer-overlay">
+                <h4>Economy Cars</h4>
+                <p>Budget-friendly vehicles for everyday use.</p>
+                <a href="{{ url('/contact') }}" class="btn btn-sm btn-light mt-2">Book Now</a>
+            </div>
         </div>
 
     </div>
+</div>
 
-</section>
+<!-- Footer -->
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-3">Trap Investments</h5>
+                <p>Reliable investment & business services in Tanzania, including Car Rental, Food Supply, and Real Estate solutions.</p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url('/') }}" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="{{ url('/pages/car-rental') }}" class="text-light text-decoration-none">Car Rental</a></li>
+                    <li><a href="{{ url('/pages/food') }}" class="text-light text-decoration-none">Trap Food</a></li>
+                    <li><a href="{{ url('/pages/real-estate') }}" class="text-light text-decoration-none">Real Estate</a></li>
+                    <li><a href="{{ url('/contact') }}" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mb-3">Contact</h5>
+                <p>Arusha, Tanzania</p>
+                <p>Email: info@trapinvestments.com</p>
+                <p>Phone: +255 123 456 789</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mb-3">Follow Us</h5>
+                <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
 
-<!-- CTA SECTION -->
-<section id="contact" class="py-28 bg-black text-white">
-
-    <div class="container mx-auto px-6 text-center">
-
-        <h2 class="text-4xl font-bold mb-6">
-            Ready to Rent a Vehicle?
-        </h2>
-
-        <p class="text-gray-300 mb-10 max-w-xl mx-auto">
-            Contact us directly for availability, pricing, and personalized service.
-        </p>
-
-        <a href="/contact"
-           class="bg-white text-black px-10 py-4 rounded-lg font-semibold hover:bg-gray-200 transition">
-           Contact Us
-        </a>
-
+        <hr class="bg-secondary mt-4">
+        <div class="text-center pt-3">
+            &copy; {{ date('Y') }} Trap Investments. All Rights Reserved.
+        </div>
     </div>
-
-</section>
-
+</footer>
 @endsection
