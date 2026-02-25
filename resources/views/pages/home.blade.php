@@ -28,8 +28,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Companies</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -38,14 +38,14 @@
                                 <a href="{{ url('/real-estate') }}" class="dropdown-item">Trap Real Estate</a>
                             </div>
                         </div>
-                        <div class="nav-item dropdown">
+                        {{-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="404.html" class="dropdown-item">404 Error</a>
                             </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div> --}}
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -54,7 +54,8 @@
 
 
         <!-- Header Start -->
-<div class="container-fluid header bg-white p-0">
+<div id="home" class="container-fluid header bg-white p-0">
+
     <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
 
         <!-- Text Column -->
@@ -167,7 +168,7 @@
 
 
         <!-- About Start -->
-        <div class="container-xxl py-5">
+        <div id="about" class="container-xxl py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -192,7 +193,7 @@ We combine professionalism with efficiency to ensure the highest level of client
 
 
         <!-- Call to Action Start -->
-        <div class="container-xxl py-5">
+        <div id="contact" class="container-xxl py-5">
             <div class="container">
                 <div class="bg-light rounded p-3">
                     <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
